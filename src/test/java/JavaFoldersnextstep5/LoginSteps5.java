@@ -1,5 +1,5 @@
 package JavaFoldersnextstep5;
-
+import cucumber.api.java.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -49,6 +49,12 @@ public void user_is_logged_into_Admin_Application()
     org.junit.Assert.assertTrue(
         "Login failed: Logout link not found",
         logout.isDisplayed()
-    );
-}
+		 );
+		}
+			@After
+public void closeBrowser() {
+    if (driver != null) {
+        driver.quit();
+        driver = null;
+    }
 }
