@@ -16,7 +16,7 @@ public class LoginSteps5 {
 	@Given("^User is navigating to the page$")
 	public void user_is_navigating_to_the_page() throws Throwable {
 
-		WebDriver driver = new ChromeDriver();
+	    driver = new ChromeDriver();
 		driver.get("https://admin-demo.nopcommerce.com/");
 	}
 
