@@ -38,9 +38,17 @@ public class LoginSteps5 {
 		login.click();
 	}
 
-	@Then("^User is logged into Admin Application$")
-	public void user_is_logged_into_Admin_Application() throws Throwable {
-		System.out.println("The project has successfully passed");
-	}
+	@Then("^User is logged into Admin Applications$")
+public void user_is_logged_into_Admin_Application()
+        throws Throwable {
 
+    WebElement logout = driver.findElement(
+        By.cssSelector("a[href='/logout']")
+    );
+
+    org.junit.Assert.assertTrue(
+        "Login failed: Logout link not found",
+        logout.isDisplayed()
+    );
+}
 }
