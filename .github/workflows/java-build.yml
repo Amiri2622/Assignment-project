@@ -2,6 +2,9 @@ name: Java Build Check
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - modernize-test-automation
 
 jobs:
   build:
