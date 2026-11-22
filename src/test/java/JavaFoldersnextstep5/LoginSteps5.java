@@ -25,11 +25,11 @@ public class LoginSteps5 {
 
 		WebElement Email = driver.findElement(By.id("Email"));
 		Email.clear();
-		Email.sendKeys("admin@yourstore.com");
+		Email.sendKeys(System.getenv("TEST_EMAIL"));
 
 		WebElement password = driver.findElement(By.id("password"));
 		password.clear();
-		password.sendKeys("admin");
+	password.sendKeys(System.getenv("TEST_PASSWORD"));
 
 	}
 	@And("^User is clicking on Login button$")
