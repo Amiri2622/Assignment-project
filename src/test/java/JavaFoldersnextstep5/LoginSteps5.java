@@ -59,3 +59,4 @@ public void closeBrowser() {
         driver = null;
     }
 }
+}
